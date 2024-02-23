@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name     wikipedia_ipareader_links
-// @namespace https://github.com/bqcrabtree
+// @namespace https://github.com/bqcrabtree/userscripts
 // @description Modifies wikipedia IPA links to - instead of pointing to the "help" document - point to the ipa-reader website. That's all it does. I chose to use the "Justin" voice because I think he's the cutest sounding one. :P
 // @version  0.1
 // @grant    none
