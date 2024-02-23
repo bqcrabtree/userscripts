@@ -7,13 +7,11 @@
 // @match    https://*.wikipedia.org/wiki/*
 // ==/UserScript==
 
-window.addEventListener("load", () => {
-    [...document.getElementsByClassName("IPA")]
-        .map(e => ({
-            element: e,
-            content: e.textContent
-                .slice(1, -1)
-                .split(",")[0]
-        }))
-        .forEach(e => e.element.innerHTML = `<a href="http://ipa-reader.xyz/?text=${e.content}&voice=Justin" target="_blank">${e.content}</a>`);
-});
+window.addEventListener("load", () => [...document.getElementsByClassName("IPA")]
+    .map(e => ({
+        element: e,
+        content: e.textContent
+            .slice(1, -1)
+            .split(",")[0]
+    }))
+    .forEach(e => e.element.innerHTML = `<a href="http://ipa-reader.xyz/?text=${e.content}&voice=Justin" target="_blank">${e.content}</a>`));
