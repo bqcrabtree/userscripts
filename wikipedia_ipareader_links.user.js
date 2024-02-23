@@ -8,6 +8,6 @@
 // ==/UserScript==
 
 window.addEventListener("load", () => {
-	let elements = [...document.getElementsByClassName("IPA")].map(e => ({ element: e, content: e.textContent.slice(1, -1).split(",")[0] }));
-	elements.forEach(e => e.element.innerHTML = `<a href="http://ipa-reader.xyz/?text=${e.content}&voice=Justin" target="_blank">${e.content}</a>`)
+    let elements = [...document.getElementsByClassName("IPA")].map(e => ({ element: e, content: e.textContent.slice(1, -1).split(",")[0] }));
+    elements.forEach(e => e.element.innerHTML = `<a href="http://ipa-reader.xyz/?text=${e.content}&voice=Justin" target="_blank">${e.content}</a>`)
 });
