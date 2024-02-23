@@ -16,7 +16,8 @@ window.addEventListener("load", () => [...document.getElementsByClassName("IPA")
     }))
     .forEach(e => {
         if (e.element.firstChild.tagName == "A") {
-            e.element.firstChild.href = `http://ipa-reader.xyz/?text=${e.content}&voice=Justin`;
+            e.element.firstChild.href = `http://ipa-reader.xyz/?text=${encodeURIComponent(e.content)}&voice=Justin`;
             e.element.firstChild.target = "_blank";
+            e.element.firstChild.title = `IPA Reader: /${e.content}/`;
         }
     }));
