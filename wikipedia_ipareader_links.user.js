@@ -14,4 +14,9 @@ window.addEventListener("load", () => [...document.getElementsByClassName("IPA")
             .slice(1, -1)
             .split(",")[0]
     }))
-    .forEach(e => e.element.innerHTML = `<a href="http://ipa-reader.xyz/?text=${e.content}&voice=Justin" target="_blank">${e.content}</a>`));
+    .forEach(e => {
+        if (e.element.firstChild.tagName == "A") {
+            e.element.firstChild.href = `http://ipa-reader.xyz/?text=${e.content}&voice=Justin`;
+            e.element.firstChild.target = "_blank";
+        }
+    }));
